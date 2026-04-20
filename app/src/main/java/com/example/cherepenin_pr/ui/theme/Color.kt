@@ -14,3 +14,7 @@ val DescriptionColor = Color(0xFF939396)
 val TextButtonColor = Color(0xFF57A9FF)
 val ButtonColor1 = Color(0xFF1A6FEE)
 val DisButtonColor1 = Color(0xFFC9D4FB)
+val DaleeCol = Color(0xFF57A9FF)
+val AnalizyCol = Color(0xFF00B712)
+
+val circleColor = Color(0xFF57A9FF)

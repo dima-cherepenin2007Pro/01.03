@@ -38,7 +38,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    Cherepenin_PrTheme {
-        Greeting("Android")
-    }
+    Pr_06_screen()
 }

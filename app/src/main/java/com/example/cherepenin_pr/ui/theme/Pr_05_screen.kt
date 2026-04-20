@@ -9,16 +9,24 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import com.example.cherepenin_pr.ui.theme.Components.OnboardDescription
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.cherepenin_pr.ui.theme.Components.PrimaryButton
 import com.example.cherepenin_pr.ui.theme.Components.SecondaryButton
 import com.example.cherepenin_pr.ui.theme.Components.TextInput
 import com.example.cherepenin_pr.ui.theme.Components.TextButton
-
+import android.R.attr.fontWeight
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.layout.width
 @Composable
 fun Pr_05_screen(
     modifier: Modifier = Modifier
@@ -26,43 +34,57 @@ fun Pr_05_screen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(Color.White)
             .padding(
-                top = 50.dp,
-                start = 15.dp,
-                end = 15.dp
+                start = 20.dp,
+                end = 20.dp
             ),
     ) {
+        Spacer(modifier = Modifier.height(100.dp))
+
         Column(
             modifier = Modifier
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top,
         ) {
-            OnboardDescription(
-                "Добро Пожаловать!",
-                28,
-            )
+            Box(){
+                Text(
+                    text = "Добро пожаловать!",
+                    color = Color.Black,
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight(700),
+                )
+            }
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            OnboardDescription(
-                "Войдите, чтобы пользоваться функциями приложения!",
-                19,
-            )
+            Box(){
+                Text(
+                    text = "Войдите, чтобы пользоваться функциями приложения",
+                    color = Color.Black,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight(400),
+                )
+            }
         }
 
-        Spacer(modifier = Modifier.height(200.dp))
+        Spacer(modifier = Modifier.height(68.dp))
 
         Column(
             modifier = Modifier
                 .fillMaxWidth(),
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.Start,
-        ){
-            OnboardDescription(
-                "Вход по E-mail",
-                13
-            )
+        ) {
+            Box() {
+                Text(
+                    text = "Вход по E-mail",
+                    color = Color.Black,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight(400),
+                )
+            }
 
             Spacer(modifier = Modifier.height(1.dp))
 
@@ -72,7 +94,7 @@ fun Pr_05_screen(
                     .fillMaxWidth()
             )
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.height(32.dp))
 
             PrimaryButton(
                 true,
@@ -82,31 +104,38 @@ fun Pr_05_screen(
                     .fillMaxWidth()
                     .height(54.dp)
             )
+        }
+        Spacer(modifier = Modifier.height(162.dp))
 
-            Spacer(modifier = Modifier.height(200.dp))
-
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                verticalArrangement = Arrangement.Bottom,
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ){
-                OnboardDescription(
-                    "Или войдите с помощью",
-                    14
-                )
-
-                Spacer(modifier = Modifier.height(20.dp))
-
-                SecondaryButton(
-                    true,
-                    "Войти с Яндекс",
-                    20,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(54.dp)
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .padding(
+                    bottom = 56.dp
+                ),
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ){
+            Box(){
+                Text(
+                    text = "Или войдите с помощью",
+                    color = Color.Black,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight(400),
                 )
             }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            SecondaryButton(
+                true,
+                "Войти с Яндекс",
+                20,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(54.dp)
+            )
         }
     }
 }

@@ -12,6 +12,8 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.size
+import com.example.cherepenin_pr.ui.theme.circleColor
+
 @Composable
 fun CircleButton(
     ifselected: Boolean,
@@ -23,12 +25,12 @@ fun CircleButton(
         onClick = onClick,
         shape = CircleShape,
         colors = ButtonDefaults.buttonColors(
-            containerColor = if (ifselected) Color.Blue else Color.White,
+            containerColor = if (ifselected) circleColor else Color.White,
             contentColor = Color.White
         ),
         border = BorderStroke(
             width = 2.dp,
-            color = Color.Blue
+            color = circleColor
         ),
         modifier = modifier
             .size(size.dp),
