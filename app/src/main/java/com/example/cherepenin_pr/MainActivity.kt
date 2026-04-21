@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.cherepenin_pr.ui.theme.AppNavigation
 import com.example.cherepenin_pr.ui.theme.Cherepenin_PrTheme
 import com.example.cherepenin_pr.ui.theme.Pr_05_screen
 import com.example.cherepenin_pr.ui.theme.Pr_06_screen
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Cherepenin_PrTheme {
-                Pr_06_screen()
+                AppNavigation()
             }
         }
     }
@@ -38,5 +39,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    Pr_06_screen()
+    AppNavigation()
 }

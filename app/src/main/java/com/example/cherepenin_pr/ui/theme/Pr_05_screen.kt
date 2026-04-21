@@ -35,7 +35,8 @@ import com.example.cherepenin_pr.ui.theme.Components.TextInput2
 
 @Composable
 fun Pr_05_screen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onNextClick: () -> Unit
     ) {
     var emailText by remember { mutableStateOf("") }
     val isEmailValid = emailText.isNotBlank()
@@ -113,7 +114,8 @@ fun Pr_05_screen(
                 17,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(54.dp)
+                    .height(54.dp),
+                onClick = onNextClick,
             )
         }
         Spacer(modifier = Modifier.height(162.dp))
@@ -154,5 +156,5 @@ fun Pr_05_screen(
 @Preview
 @Composable
 private fun Pr_05_screen_Preview() {
-    Pr_05_screen()
+    Pr_05_screen(onNextClick = {})
 }

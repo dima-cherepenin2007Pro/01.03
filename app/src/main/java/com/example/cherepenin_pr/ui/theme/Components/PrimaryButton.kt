@@ -22,10 +22,11 @@ fun PrimaryButton(
     ifable: Boolean,
     text: String,
     text_size: Int,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {},
 ) {
     Button(
-        onClick = {},
+        onClick = onClick,
         enabled = ifable,
         shape = RoundedCornerShape(8.dp),
         colors = ButtonDefaults.buttonColors(
