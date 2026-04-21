@@ -55,7 +55,7 @@ fun Success_screen(
             }
         }
 
-        Spacer(modifier = Modifier.height(100.dp))
+        Spacer(modifier = Modifier.height(64.dp))
 
         Column(
             modifier = Modifier
@@ -68,7 +68,7 @@ fun Success_screen(
                     contentDescription = ""
                 )
             }
-            Spacer(modifier = Modifier.height(50.dp))
+            Spacer(modifier = Modifier.height(30.dp))
 
             Box(){
                 Text(
@@ -80,7 +80,7 @@ fun Success_screen(
             }
         }
 
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
         Column(
             modifier = Modifier
@@ -90,7 +90,7 @@ fun Success_screen(
             Box(){
                 Text(
                     text = "Вам осталось дождаться приезда медсестры и сдать анализы. До скорой встречи!",
-                    fontSize = 17.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight(400),
                     color = Color.Black,
                     textAlign = TextAlign.Center
@@ -102,7 +102,7 @@ fun Success_screen(
             Box(){
                 Text(
                     text = "Не забудьте ознакомиться с правилами подготовки к сдаче анализов",
-                    fontSize = 17.sp,
+                    fontSize = 14.sp,
                     fontWeight = FontWeight(400),
                     color = Color.Black,
                     textAlign = TextAlign.Center
@@ -110,7 +110,7 @@ fun Success_screen(
             }
         }
 
-        Spacer(modifier = Modifier.height(70.dp))
+        Spacer(modifier = Modifier.height(97.dp))
 
         Column(
             modifier = Modifier

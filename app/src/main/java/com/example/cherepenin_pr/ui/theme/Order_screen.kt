@@ -29,6 +29,8 @@ import com.example.cherepenin_pr.R
 import com.example.cherepenin_pr.ui.theme.Components.PrimaryButton
 import com.example.cherepenin_pr.ui.theme.Components.TextInput
 import com.example.cherepenin_pr.ui.theme.Components.TextInput2
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.BlendMode
 
 @Composable
 fun Order_screen(
@@ -56,11 +58,11 @@ fun Order_screen(
         ) {
             Box() {
                 Image(
-                    painter = painterResource(R.drawable.shape),
+                    painter = painterResource(R.drawable.shape5),
                     contentDescription = ""
                 )
             }
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(32.dp))
             Box() {
                 Text(
                     text = "Оформление заказа",
@@ -123,24 +125,20 @@ fun Order_screen(
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
             ){
-                Box() {
-                    Text(
-                        text = "Комментарий",
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight(400)
-                    )
-                }
-                Box(){
-                    Image(
-                        painter = painterResource(R.drawable.shape),
-                        contentDescription = "",
-                        modifier = Modifier
-                            .size(width = 24.dp, height = 20.dp)
-                    )
-                }
+                Text(
+                    text = "Комментарий",
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight(400)
+                )
+                Image(
+                    painter = painterResource(R.drawable.shape6),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .size(width = 24.dp, height = 20.dp)
+                )
             }
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             TextInput(
                 "Можете оставить свои пожелания",
@@ -149,7 +147,7 @@ fun Order_screen(
             )
         }
 
-        Spacer(modifier = Modifier.height(60.dp))
+        Spacer(modifier = Modifier.height(91.dp))
 
         Column() {
             Row(
@@ -161,12 +159,12 @@ fun Order_screen(
                     Text(
                         text = "Промокод",
                         fontSize = 14.sp,
-                        fontWeight = FontWeight(400)
+                        fontWeight = FontWeight(500)
                     )
                 }
                 Box() {
                     Image(
-                        painter = painterResource(R.drawable.shape),
+                        painter = painterResource(R.drawable.shape7),
                         contentDescription = "",
                         modifier = Modifier
                             .size(width = 24.dp, height = 20.dp)
@@ -174,7 +172,41 @@ fun Order_screen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(60.dp))
+            Spacer(modifier = Modifier.height(16.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth(),
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.shape8),
+                    contentDescription = "",
+                    modifier = Modifier,
+                    colorFilter = ColorFilter.tint(
+                        color = Color.Black,
+                        blendMode = BlendMode.Multiply,
+                    ),
+                )
+                Image(
+                    painter = painterResource(R.drawable.shape8),
+                    contentDescription = "",
+                    modifier = Modifier,
+                    colorFilter = ColorFilter.tint(
+                        color = Color.Black,
+                        blendMode = BlendMode.Multiply,
+                    ),
+                )
+                Image(
+                    painter = painterResource(R.drawable.shape8),
+                    contentDescription = "",
+                    modifier = Modifier,
+                    colorFilter = ColorFilter.tint(
+                        color = Color.Black,
+                        blendMode = BlendMode.Multiply,
+                    ),
+                )
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
 
             Row(
                 modifier = Modifier
@@ -183,21 +215,21 @@ fun Order_screen(
             ){
                 Box(){
                     Text(
-                        text = "Промокод",
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight(400)
+                        text = "1 анализ",
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight(500)
                     )
                 }
                 Box() {
                     Text(
-                        text = "Промокод",
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight(400)
+                        text = "690 ₽",
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight(500)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
             PrimaryButton(
                 isEmailValid,
