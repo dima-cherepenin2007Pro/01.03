@@ -82,6 +82,7 @@ fun Pr_06_screen(modifier: Modifier = Modifier) {
                 .padding(
                     top = 50.dp,
                     start = 30.dp,
+                    end = 30.dp
                 ),
         ){
             Column(

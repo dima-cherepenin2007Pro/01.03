@@ -13,30 +13,37 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
+
 @Composable
-fun TextInput(
+fun TextInput2(
     label: String,
+    value: String,
+    onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier
 ){
-    var text by remember {mutableStateOf("")}
-
     OutlinedTextField(
         modifier = modifier,
-        value = text,
-        onValueChange = {text = it},
+        value = value,
+        onValueChange = onValueChange,
         placeholder = { Text(label) },
         colors = OutlinedTextFieldDefaults.colors(
-            focusedTextColor = Color.White,
-            unfocusedTextColor = Color.White,
+            focusedTextColor = Color.Black,
+            unfocusedTextColor = Color.Black,
+            focusedLabelColor = Color.Gray,
+            unfocusedLabelColor = Color.Gray
         )
     )
 }
 
 @Preview
 @Composable
-private fun TextInputPreview() {
-    TextInput(
-        "Текст для ввода с подсказкой",
+private fun TextInput2Preview() {
+    var text by remember { mutableStateOf("") }
+
+    TextInput2(
+        label = "Текст для ввода с подсказкой",
+        value = text,
+        onValueChange = { text = it },
         modifier = Modifier
             .size(width = 335.dp, height = 48.dp)
     )

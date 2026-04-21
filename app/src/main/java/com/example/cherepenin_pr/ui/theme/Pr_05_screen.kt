@@ -27,10 +27,19 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.layout.width
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import com.example.cherepenin_pr.ui.theme.Components.TextInput2
+
 @Composable
 fun Pr_05_screen(
     modifier: Modifier = Modifier
     ) {
+    var emailText by remember { mutableStateOf("") }
+    val isEmailValid = emailText.isNotBlank()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -88,16 +97,18 @@ fun Pr_05_screen(
 
             Spacer(modifier = Modifier.height(1.dp))
 
-            TextInput(
+            TextInput2(
                 "example@mail.ru",
                 modifier = Modifier
-                    .fillMaxWidth()
+                    .fillMaxWidth(),
+                value = emailText,
+                onValueChange = { emailText = it }
             )
 
             Spacer(modifier = Modifier.height(32.dp))
 
             PrimaryButton(
-                true,
+                isEmailValid,
                 "Далее",
                 17,
                 modifier = Modifier
