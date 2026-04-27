@@ -15,6 +15,7 @@ import com.example.cherepenin_pr.ui.theme.AppNavigation
 import com.example.cherepenin_pr.ui.theme.Cherepenin_PrTheme
 import com.example.cherepenin_pr.ui.theme.Pr_05_screen
 import com.example.cherepenin_pr.ui.theme.Pr_06_screen
+import com.example.cherepenin_pr.ui.theme.ButtomNavigation
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Cherepenin_PrTheme {
-                AppNavigation()
+                ButtomNavigation()
             }
         }
     }

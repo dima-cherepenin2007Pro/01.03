@@ -27,7 +27,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.painterResource
 import com.example.cherepenin_pr.R
 import com.example.cherepenin_pr.ui.theme.Components.PrimaryButton
-import com.example.cherepenin_pr.ui.theme.Components.TextInput
 import com.example.cherepenin_pr.ui.theme.Components.TextInput2
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.BlendMode
@@ -41,6 +40,7 @@ fun Order_screen(
     var addressText by remember { mutableStateOf("") }
     var telephoneText by remember { mutableStateOf("")}
     val isEmailValid = addressText.isNotBlank() && telephoneText.isNotBlank()
+    var commentText by remember {mutableStateOf("")}
 
     Column(
         modifier = Modifier
@@ -140,11 +140,16 @@ fun Order_screen(
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            TextInput(
-                "Можете оставить свои пожелания",
-                modifier = Modifier
-                    .size(width = 345.dp, height = 152.dp)
-            )
+            Box(modifier = Modifier.fillMaxWidth()){
+                TextInput2(
+                    "Можете оставить свои пожелания",
+                    modifier = Modifier
+                        .size(width = 390.dp, height = 152.dp),
+                    value = commentText,
+                    onValueChange = { commentText = it }
+
+                )
+            }
         }
 
         Spacer(modifier = Modifier.height(91.dp))

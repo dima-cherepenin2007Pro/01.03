@@ -19,7 +19,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cherepenin_pr.ui.theme.Components.PrimaryButton
 import com.example.cherepenin_pr.ui.theme.Components.SecondaryButton
-import com.example.cherepenin_pr.ui.theme.Components.TextInput
 import com.example.cherepenin_pr.ui.theme.Components.TextButton
 import android.R.attr.fontWeight
 import androidx.compose.foundation.background
