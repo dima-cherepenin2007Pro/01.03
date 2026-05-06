@@ -18,43 +18,51 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.unit.sp
+import com.example.cherepenin_pr.ui.theme.pailColor
 
 @Composable
 fun Card(
     modifier: Modifier = Modifier,
     text1: String,
     text2: String,
-    text3: String
+    text3: String,
+    text4: String
     ) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
-            .background(Color.Green)
+            .background(Color.White)
     ){
         Column(modifier = Modifier
             .padding(
-                start = 10.dp,
-                top = 5.dp,
-                end = 10.dp,
-                bottom = 5.dp
+                start = 16.dp,
+                top = 16.dp,
+                end = 16.dp,
+                bottom = 16.dp
             )){
             Box(){
-                Text(text1)
+                Text(text = text1,
+                    fontSize = 16.sp)
             }
             Spacer(modifier = Modifier.height(30.dp))
             Row(modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Column(){
                     Box(){
-                        Text(text2)
+                        Text(text = text2,
+                            fontSize = 14.sp,
+                            color = pailColor)
                     }
+                    Spacer(modifier = Modifier.height(4.dp))
                     Box(){
-                        Text(text3)
+                        Text(text = text3,
+                            fontSize = 17.sp)
                     }
                 }
                 PrimaryButton(true,
-                    "Кнопка",
+                    text4,
                     17,
                     onClick = {}
                 )
@@ -65,5 +73,5 @@ fun Card(
 @Preview
 @Composable
 private fun CardPreview() {
-    Card(text1 = "Илюха", text2 = "Мэд",text3 = "База")
+    Card(text1 = "a", text2 = "b",text3 = "d", text4 = "Добавить")
 }

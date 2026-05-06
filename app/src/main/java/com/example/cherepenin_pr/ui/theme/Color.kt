@@ -18,3 +18,4 @@ val DaleeCol = Color(0xFF57A9FF)
 val AnalizyCol = Color(0xFF00B712)
 
 val circleColor = Color(0xFF57A9FF)
+val pailColor = Color(0xFF939396)

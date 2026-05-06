@@ -33,6 +33,7 @@ import androidx.compose.material3.Card
 import com.example.cherepenin_pr.ui.theme.Components.Card
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import com.example.cherepenin_pr.ui.theme.Components.PailButton
 
 @Composable
 fun Pr_11_screen(
@@ -50,76 +51,102 @@ fun Pr_11_screen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White),
+            .background(Color(0xFFF4F4F4)),
     ){
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
                     start = 10.dp,
-                    end = 10.dp
+                    end = 10.dp,
+                    top = 24.dp
                 )
                 .padding(
                     top = 10.dp
                 ),
             contentAlignment = Alignment.Center
         ) {
-            LazyRow{
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy(15.dp)
+            ){
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    PailButton(true,
+                        "Популярный",
+                        17,
+                        modifier = Modifier)
+                }
+                item{
+                    PailButton(true,
+                        "Covid",
+                        17,
+                        modifier = Modifier)
+
+                }
+                item{
+                    PailButton(true,
+                        "Комплексные",
+                        17,
+                        modifier = Modifier)
+                }
+                item{
+                    PailButton(true,
+                        "Популярный",
+                        17,
+                        modifier = Modifier)
+                }
+                item{
+                    PailButton(true,
+                        "Covid",
+                        17,
+                        modifier = Modifier)
+
+                }
+                item{
+                    PailButton(true,
+                        "Комплексные",
+                        17,
+                        modifier = Modifier)
                 }
             }
         }
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         Box(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
                 .padding(
-                    start = 10.dp,
-                    end = 10.dp
+                    start = 20.dp,
+                    end = 20.dp
                 ),
             contentAlignment = Alignment.Center
         ) {
             LazyColumn(
-                verticalArrangement = Arrangement.spacedBy(15.dp)
+                verticalArrangement = Arrangement.spacedBy(16.dp)
             ){
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "ПЦР-тест на определение РНК коронавируса стандартный", text2 = "2 дня", text3 = "1 800 ₽",text4 = "Добавить")
                 }
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "Клинический анализ крови с лейкоцитарной формулой", text2 = "1 день", text3 = "690 ₽",text4 = "Добавить")
                 }
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "Биохимический анализ крови, базовый", text2 = "1 день", text3 = "2440 ₽",text4 = "Добавить")
                 }
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "СОЭ (венозная кровь)", text2 = "1 день", text3 = "240 ₽",text4 = "Добавить")
                 }
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "ПЦР-тест на определение РНК коронавируса стандартный", text2 = "2 дня", text3 = "1 800 ₽",text4 = "Добавить")
                 }
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "Клинический анализ крови с лейкоцитарной формулой", text2 = "1 день", text3 = "690 ₽",text4 = "Добавить")
                 }
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "Биохимический анализ крови, базовый", text2 = "1 день", text3 = "2440 ₽",text4 = "Добавить")
                 }
                 item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
-                }
-                item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
-                }
-                item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
-                }
-                item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
-                }
-                item{
-                    Card(text1 = "илюха", text2 = "Мэд", text3 = "База")
+                    Card(text1 = "СОЭ (венозная кровь)", text2 = "1 день", text3 = "240 ₽",text4 = "Добавить")
                 }
             }
         }
